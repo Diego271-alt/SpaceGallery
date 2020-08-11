@@ -1,46 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;800&display=swap');
+
 body{
-    background-color: black;
+    background-color: #e5dada;
     margin: 0;
     padding: 0;
+    font-family: 'Baloo Tamma 2', cursive;;
 }
 a{
     text-decoration: none;
 }
 
-h1{
+h1,h2{
     margin: 0;
     padding: 0;
 }
-#content{
-    height: 100%;
-    width: 100%;
 
-}
+
 
 /*Estilos del Header*/
+header {
+    position: sticky;
+    top: 0;
+    z-index: 5;
 
-.Header{
-    background-color: blanchedalmond;
-    height: 100px;
+}
+
+
+.Header-main{
+    background-color: #002642;
+    height: 120px;
     display: grid;
-    grid-auto-flow: row;
+    grid-template-columns: 450px 1fr 580px;
     
+    align-items: center;
+    box-shadow: 2px 6px 20px 0px black;
+    border-bottom: 5px ridge #840032;
 
 
-    
+ 
+}
+.Header-logo{
+
+    display: grid;
+    grid-column: 1;
+    margin-left: 30px;
 }
 
 
-.Home-inner{
-    overflow-x: hidden;
-    background-image: url('/src/IMG/fondo.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-   
-    width: 100%;
-    height: 100vh;
-    margin-top: 10px;
+.Header-logo a{
+    font-size: 30px;
+}
+.Header-logo  a{
+    color: white;
+}
+.Header-nav{
+    display: grid;
+    grid-column: 3;
+    
+    
+
+}
+
+.Header-nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around;
     padding: 0;
+    
+
 }
+
+.Header-nav li > a:hover{
+    cursor: pointer;
+
+}
+
+.Header-nav a{
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/*Home inner and home components*/
+.Home-inner {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-areas: 'banner'
+                         'content';
+    justify-content: center;
+    align-items: center;
+
+
+        
+    
+ 
+
+}
+
+.Home-inner .Home-image{
+    display: grid;
+    grid-area: banner;
+    width: 100%;
+    height: 800px;
+    z-index: 3;
+    
+}
+
+.Home-image img{
+    width: 100%;
+    height: inherit;
+    
+}
+
+.Home-inner .container-post{
+    background-color: rgb(229 218 218 / 55%);
+    border-top: 20px solid #e59500;
+    z-index: 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'post1 post2 post3';
+    height: 600px;
+    width: calc(100% - 150px);
+    border-radius: 10px;
+    
+    position: absolute;
+    box-shadow: 0 0 6px 0px black;
+    margin-top: 600px;
+    margin-left: 70px;
+    
+    
+  
+}
+
+
+.Home-inner .post{
+    
+    display: grid;
+   
+    justify-self: center;
+    align-self: center;
+    width: 400px;
+    height: 500px;
+    grid-template-rows: 1fr 1fr 50px;
+    grid-template-areas: 'img'
+                         'content'
+                         'links';
+    border-radius: 20px;
+   
+    box-shadow: 1px 0px 13px 0px black;
+    background-color: rgb(0 38 66 / 88%);
+
+    grid-gap: 20px;
+}
+
+
+.Home-inner .post:nth-child(1){
+    
+    display: grid;
+    grid-area: post1;
+    
+   
+
+}
+
+.Home-inner .post:nth-child(2){
+    
+    display: grid;
+    grid-area: post2;
+   
+
+}
+.Home-inner .post:nth-child(3){
+    
+    display: grid;
+    grid-area: post3;
+   
+
+}
+.Home-inner .post:nth-child(4){
+    
+    display: grid;
+    grid-area: post4;
+  
+
+}
+
+
+
+
+
+
+.post h4{
+    
+    border-bottom: 3px solid white;
+    text-align: center;
+    color:white;
+
+
+}
+.post .post-content{
+    width: 100%;
+    height: 200px;
+    display: grid;
+    grid-area: content;
+}
+.post p{
+    padding: 15px;
+    text-align: justify;
+    color: white;
+}
+
+.post .post-resources{
+    display: grid;
+    grid-area: links;
+    justify-content: center;
+    align-items: center;
+    width:  100%;
+    height:  100%;
+    background: #840032;
+    border-radius: 0px 0px 20px 20px;
+    border-top: 1px solid #e5dada;
+}
+
+.post-resources a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Baloo Tamma 2', cursive;
+}
+
+.post .post-img{
+    display: grid;
+    grid-area: img;
+}
+
+.post:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: 1px 0px 13px 0px black;
+}
+
+.post a:hover{
+    font-weight: bold;
+ 
+}
+
+/**/
+.txt-type > .txt{
+    border-right: 0.08rem solid black;
+
+    
+}
+
+.txt-type{
+    color: #840032;
+    
+}
+
+
+
+
 
 

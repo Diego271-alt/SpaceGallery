@@ -8,7 +8,7 @@ import resolveRoutes from '../utils/resolveRoutes'
 import Error404 from '../pages/Error404'
 import Gallery from  '../pages/Gallery'
 
-
+import Writer from '../utils/Writer'
 
 const routes = {
     '/': Home,
